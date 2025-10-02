@@ -3,7 +3,6 @@ import { DeviceRepository } from "@/core/repository";
 import { InMemoryDeviceRepository } from ".";
 
 import { beforeEach, describe, expect, it } from "bun:test";
-import { SupabaseDeviceRepository } from "../supabase";
 
 describe("DeviceRepository contract tests", () => {
   let repo: DeviceRepository;
@@ -13,7 +12,7 @@ describe("DeviceRepository contract tests", () => {
       Cambia al constructor de tu implementación
       Ej: new PostgresDeviceRepository()
     */
-    repo = new SupabaseDeviceRepository();
+    repo = new SupabaseDeviceRepository
   });
 
   it("registerFrequentComputer should persist and return a frequent computer", async () => {
