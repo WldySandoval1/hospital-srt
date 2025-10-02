@@ -13,7 +13,7 @@ import { MedicalDeviceEntity } from "./core/domain/medical-device.entity";
       inject: [ConfigService],
       useFactory: (config: ConfigService) => {
         const dbUrl = config.get<string>("DATABASE_URL");
-        console.log("DATABASE_URL:", dbUrl); // <- aquí verificas la variable
+        console.log("DATABASE_URL:", dbUrl);
         return {
           type: "postgres",
           url: dbUrl,
